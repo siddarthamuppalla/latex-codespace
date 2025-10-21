@@ -1,0 +1,38 @@
+name: Resume Generation
+on: push
+
+jobs:
+  upload_to_drive:
+      runs-on: ubuntu-latest
+      steps:
+          - name: Clone Repository
+            uses: actions/checkout@v2
+
+          - name: Clean up LaTeX build files
+            run: |
+                rm -rf *.aux *.bbl *.blg *.log *.out *.toc
+
+          - name: Compile LaTeX document
+            uses: xu-cheng/latex-action@v2
+            with:
+                root_file: SiddarthaMuppalla_Resume.tex
+                latexmk_use_xelatex: true
+
+          - name: Extract branch name
+            shell: bash
+            run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+            id: extract_branch
+
+          - name: Make Directory Structure
+            run: |
+                mkdir -p ${{ steps.extract_branch.outputs.branch }}
+                mv SiddarthaMuppalla_Resume.pdf ${{ steps.extract_branch.outputs.branch }}/
+
+          - name: upload file to Google Drive
+            uses: adityak74/google-drive-upload-git-action@main
+            with:
+                credentials: ${{ secrets.GOOGLE_DRIVE_API_KEY }}
+                filename: ${{ steps.extract_branch.outputs.branch }}/SiddarthaMuppalla_Resume.pdf
+                folderId: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+                overwrite: "true"
+                mirrorDirectoryStructure: "true"
