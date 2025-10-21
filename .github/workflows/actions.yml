@@ -132,7 +132,7 @@ jobs:
           mv SiddarthaMuppalla_Resume.pdf ${{ steps.extract_branch.outputs.branch }}/
 
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: resume-pdf
           path: ${{ steps.extract_branch.outputs.branch }}/SiddarthaMuppalla_Resume.pdf
@@ -142,7 +142,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download PDF artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: resume-pdf
           path: .
