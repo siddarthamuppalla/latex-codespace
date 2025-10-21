@@ -1,0 +1,150 @@
+\documentclass[letterpaper,10pt]{article}
+
+% --- PACKAGES ---
+% Set page margins
+\usepackage[margin=0.4in, top=0.5in, bottom=0.5in]{geometry}
+% Support for UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Use modern font encodings
+\usepackage[T1]{fontenc}
+% Improves typography
+\usepackage{microtype}
+% Use space between paragraphs instead of indentation
+\usepackage{parskip} 
+% For customized lists
+\usepackage{enumitem}
+% For clickable links without visible borders
+\usepackage[hidelinks]{hyperref}
+% For defining custom colors
+\usepackage{xcolor}
+% For styling section titles
+\usepackage{sectsty}
+% For adjusting spacing around section titles
+\usepackage{titlesec}
+
+% --- FONT ---
+% Use a clean sans-serif font that's widely available
+\renewcommand{\familydefault}{\sfdefault}
+
+% --- CUSTOMIZATION ---
+% Define a custom accent color
+\definecolor{accent}{HTML}{1E88FF}
+
+% Simple commands to make future edits easy
+\newcommand{\Name}{Siddartha Muppalla}
+\newcommand{\Location}{Salt Lake City, UT}
+\newcommand{\Phone}{+1 (385) 313-5989}
+\newcommand{\EmailAddr}{siddartha.muppalla@gmail.com}
+\newcommand{\LinkedIn}{https://linkedin.com/in/siddartha-muppalla}
+\newcommand{\GitHub}{https://github.com/siddarthamuppalla}
+
+% Section heading style and spacing
+\sectionfont{\color{accent}\scshape\large}
+\titlespacing*{\section}{0pt}{1.5ex}{1ex}
+
+% Compact lists with a dash bullet, no extra vertical space
+\setlist[itemize]{left=0pt, label=--, nosep}
+
+% --- DOCUMENT START ---
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+  {\LARGE\bfseries \Name}\\[4pt]
+  \small\Location \quad $|$ \quad \Phone \quad $|$ \quad \href{mailto:\EmailAddr}{\texttt{\EmailAddr}}\\
+  \small\href{\LinkedIn}{LinkedIn} \quad $|$ \quad \href{\GitHub}{GitHub}
+\end{center}
+
+% --- SUMMARY ---
+\section*{Summary}
+\begin{itemize}
+  \item Software engineer with 4+ years of experience specializing in \textbf{Java, Node.js, Golang, Salesforce}, and \textbf{AWS}, delivering high-performance solutions.
+  \item Demonstrated expertise in optimizing system scalability, improving performance, and enhancing troubleshooting efficiency.
+  \item Passionate about leveraging full-stack development skills and delivering high quality and maintainable software.
+\end{itemize}
+
+% --- AWARDS ---
+\section*{Awards \& Achievements}
+\begin{itemize}
+  \item \textbf{Governor's Award for Excellence in Public Service 2025} --- Awarded by the Governor of the State of Utah for recognizing exceptional contributions to public service through innovative technological solutions and dedication to improving community services.
+\end{itemize}
+
+% --- PROFESSIONAL EXPERIENCE ---
+\section*{Professional Experience}
+
+\textbf{Senior Analyst} \hfill Feb 2025 -- Present\\
+\textit{State of Utah, Salt Lake City, Utah}
+\begin{itemize}
+  \item BOPP Connect - Court Information Recon System:
+    \begin{itemize}
+      \item Led the end-to-end development of a court information system using \textbf{ServiceNow}, that cut down manual data import time by 85\%.
+      \item Designed and implemented complex workflows, business rules, and UI policies to streamline case management processes, reducing manual effort by \textbf{30\%}.
+      \item Developed Scripted REST APIs, REST Messages to integrate with external systems, enhancing data exchange and operational efficiency.
+      \item Delivered the project ahead of schedule, resulting in a \textbf{15\%} increase in team productivity and improved stakeholder satisfaction.
+    \end{itemize}
+  \item MyVoice - Victim Notification System (Salesforce):
+    \begin{itemize}
+      \item Spearheaded the development of a victim notification system using \textbf{Salesforce}, enhancing public communication.
+      \item Developed the application using \textbf{Apex, Visualforce, Flows, Lightning Web Components (LWC), and SOQL}.
+      \item Created data-flow diagrams, process flows, and technical documentation to streamline development and maintenance processes.
+      \item Integrated third-party services using system callouts and REST APIs.
+    \end{itemize}
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Analyst - I} \hfill Sep 2024 -- Feb 2025\\
+\textit{State of Utah, Salt Lake City, Utah}
+\begin{itemize}
+  \item Automated the generation and upload of \textbf{500,000} historical records to a CMS using \textbf{Spring Batch}, reducing the effort by \textbf{90\%}.
+  \item Optimized SQL queries to efficiently retrieve data, decreasing the number of database calls from 12 to 4 per document.
+  \item Designed and implemented asynchronous processing using message queues, cutting processing time from \textbf{10 hours} to \textbf{3 hours}.
+  \item \textbf{Key Technologies}: Java, Spring Batch, Postgres, OpenPDF, Git, Jira.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Software Engineer Intern} \hfill Jan 2023 -- Jun 2023\\
+\textit{Oracle, Salt Lake City, Utah}
+\begin{itemize}
+  \item Developed a customer lifecycle tracking app that generated leads that contributed to a \textbf{\$2M} increase in month-on-month revenue.
+  \item Designed a high-performance database schema to efficiently manage millions of user records.
+  \item Implemented \textbf{OAuth2.0} token-based access control, reducing \textbf{40\%} of malicious security incidents.
+  \item \textbf{Key Technologies}: JavaScript, Apex, Oracle, OAuth2.0, Git.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Software Engineer} \hfill Jun 2021 -- Jul 2022\\
+\textit{Deloitte, Hyderabad, India}
+\begin{itemize}
+  \item Developed RESTful APIs for a healthcare platform supporting \textbf{2.5 million} users, facilitating secure data handling and HIPAA compliance.
+  \item Reduced latency by \textbf{30\%} by migrating a monolithic feature to a microservice architecture and integrating it with \textbf{AWS SQS} \& \textbf{DynamoDB}.
+  \item Led end-to-end development of a customer feedback feature that boosted actionable insights by \textbf{25\%}.
+  \item Reduced deployment time by \textbf{20\%} by developing a Jenkins CI/CD pipeline to deploy \textbf{Docker} containers on \textbf{AWS ECS}.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Associate Software Developer} \hfill Jul 2020 -- Jun 2021\\
+\textit{ClearTax, Bengaluru, India}
+\begin{itemize}
+  \item Increased user engagement by \textbf{20\%} by reducing page load times through lazy loading and efficient API handling in \textbf{Express.js}.
+  \item Built middleware solutions to seamlessly integrate client ERPs and ClearTax REST APIs, saving over \textbf{20+ hours} per implementation.
+\end{itemize}
+
+% --- SKILLS & CERTIFICATIONS ---
+\section*{Skills \& Certifications}
+\begin{itemize}
+  \item \textbf{Languages}: Java, Go (Golang), JavaScript, SQL, NoSQL, HTML/CSS
+  \item \textbf{Frameworks \& Tools}: Spring, Node.js, React.js, Git, Agile (Scrum), Linux, gRPC, Salesforce, ServiceNow
+  \item \textbf{Cloud \& DevOps}: AWS (EC2, Lambda, S3, DynamoDB, RDS, ECS, CloudFormation), GCP, Docker, Jenkins, Kubernetes, CI/CD
+  \item \textbf{Certifications}: \href{https://cp.certmetrics.com/amazon/en/public/verify/credential/3VVMZX8102R11NW5}{AWS Certified Developer - Associate}, \href{https://www.credential.net/39097155-62ed-4693-a866-1bb72aa7f8a1}{GCP Associate Cloud Engineer}, \href{https://bcert.me/bc/html/show-badge.html?b=smcrexys}{Certified ScrumMaster}
+\end{itemize}
+
+% --- EDUCATION ---
+\section*{Education}
+\textbf{University of Utah} \hfill Aug 2022 -- Dec 2023\\
+Master of Science - Information Systems \quad GPA: 4.0/4.0
+\begin{itemize}
+  \item Relevant Courses: Java \& Data Structures, Algorithms, System Architecture \& Design, Security, Object-Oriented Programming
+\end{itemize}
+
+\end{document}
+
